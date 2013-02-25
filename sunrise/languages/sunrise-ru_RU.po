@@ -1,0 +1,226 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: gn_themes\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-07-03 06:55+0300\n"
+"PO-Revision-Date: 2012-07-03 07:00+0300\n"
+"Last-Translator: Vladimir Anokhin <ano.vladimir@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ./includes\n"
+
+#: sunrise.php:22
+msgid "Sunrise"
+msgstr ""
+
+#: sunrise.php:23
+msgid "WordPress plugin framework"
+msgstr "Фреймворк для WordPress плагинов"
+
+#: sunrise.php:24
+msgid "Vladimir Anokhin"
+msgstr "Владимир Анохин"
+
+#: classes/sunrise.class.php:304
+msgid "Settings"
+msgstr "Настройки"
+
+#: classes/sunrise.class.php:365
+msgid "Instructions"
+msgstr "Инструкции"
+
+#: classes/sunrise.class.php:372
+#: classes/sunrise.class.php:381
+#: classes/sunrise.class.php:390
+#: classes/sunrise.class.php:399
+msgid "Click to close"
+msgstr "Кликните, чтобы закрыть"
+
+#: includes/sunrise/backend.php:9
+msgid "For full functionality of this page it is reccomended to enable javascript."
+msgstr "Для правильной работы этой страницы рекомендуется включить JavaScript."
+
+#: includes/sunrise/backend.php:10
+msgid "Settings reseted successfully"
+msgstr "Настройки успешно сброшены"
+
+#: includes/sunrise/backend.php:11
+msgid "There is already default settings"
+msgstr "Настройки уже были сброшены"
+
+#: includes/sunrise/backend.php:12
+msgid "Settings saved successfully"
+msgstr "Настройки успешно сохранены"
+
+#: includes/sunrise/backend.php:13
+msgid "Settings not saved, because there is no changes"
+msgstr "Настройки не сохранены, т.к. ничего не изменилось"
+
+#: includes/sunrise/options.php:6
+msgid "About"
+msgstr "О плагине"
+
+#: includes/sunrise/options.php:16
+msgid "Standard fields"
+msgstr "Стандартные поля"
+
+#: includes/sunrise/options.php:20
+msgid "Text input"
+msgstr "Тестовое поле"
+
+#: includes/sunrise/options.php:21
+msgid "Text input description"
+msgstr "Описание текстового поля"
+
+#: includes/sunrise/options.php:27
+msgid "Textarea"
+msgstr "Текстовое поле"
+
+#: includes/sunrise/options.php:28
+msgid "Textarea description"
+msgstr "Описание текстового поля"
+
+#: includes/sunrise/options.php:35
+msgid "Checkbox"
+msgstr "Флажок"
+
+#: includes/sunrise/options.php:36
+msgid "Checkbox description"
+msgstr "Описание флажка"
+
+#: includes/sunrise/options.php:40
+msgid "Checkbox label"
+msgstr "Лейбл флажка"
+
+#: includes/sunrise/options.php:43
+msgid "Radio buttons"
+msgstr "Радио кнопки"
+
+#: includes/sunrise/options.php:44
+msgid "Radio buttons description"
+msgstr "Описание радио кнопок"
+
+#: includes/sunrise/options.php:46
+#: includes/sunrise/options.php:58
+#: includes/sunrise/options.php:85
+msgid "Option 1"
+msgstr "Вариант 1"
+
+#: includes/sunrise/options.php:47
+#: includes/sunrise/options.php:59
+#: includes/sunrise/options.php:86
+msgid "Option 2"
+msgstr "Вариант 2"
+
+#: includes/sunrise/options.php:48
+#: includes/sunrise/options.php:60
+#: includes/sunrise/options.php:87
+msgid "Option 3"
+msgstr "Вариант 3"
+
+#: includes/sunrise/options.php:55
+msgid "Select"
+msgstr "Выпадающий список"
+
+#: includes/sunrise/options.php:56
+msgid "Select description"
+msgstr "Описание выпадающего списка"
+
+#: includes/sunrise/options.php:70
+msgid "Additional fields"
+msgstr "Дополнительные поля"
+
+#: includes/sunrise/options.php:74
+msgid "Title field"
+msgstr "Поле заголовок"
+
+#: includes/sunrise/options.php:82
+msgid "Checkbox group"
+msgstr "Группа флажков"
+
+#: includes/sunrise/options.php:83
+msgid "Checkbox group description"
+msgstr "Описание группы флажков"
+
+#: includes/sunrise/options.php:98
+msgid "Number"
+msgstr "Число"
+
+#: includes/sunrise/options.php:99
+msgid "Number field description"
+msgstr "Описание числового поля"
+
+#: includes/sunrise/options.php:103
+msgid "pixels"
+msgstr "пиксели"
+
+#: includes/sunrise/options.php:108
+msgid "Size"
+msgstr "Размер"
+
+#: includes/sunrise/options.php:109
+msgid "Size field description"
+msgstr "Описание поля размера"
+
+#: includes/sunrise/options.php:118
+msgid "Upload"
+msgstr "Загрузить"
+
+#: includes/sunrise/options.php:119
+msgid "Upload field description"
+msgstr "Описание поля для загрузки"
+
+#: includes/sunrise/options.php:125
+msgid "Color picker"
+msgstr "Пипетка"
+
+#: includes/sunrise/options.php:126
+msgid "Color picker description"
+msgstr "Описание пипетки"
+
+#: includes/sunrise/options.php:132
+msgid "Code editor"
+msgstr "Редактор кода"
+
+#: includes/sunrise/options.php:133
+msgid "Code editor description"
+msgstr "Описание редактора кода"
+
+#: includes/sunrise/fields/about.php:2
+msgid "About this plugin"
+msgstr "О плагине"
+
+#: includes/sunrise/fields/about.php:6
+msgid "Just another column"
+msgstr "Просто другая колонка"
+
+#: includes/sunrise/fields/closetab.php:3
+msgid "Save changes"
+msgstr "Сохранить изменения"
+
+#: includes/sunrise/fields/closetab.php:4
+msgid "Saving"
+msgstr "Сохранение"
+
+#: includes/sunrise/fields/closetab.php:5
+msgid "Saved"
+msgstr "Сохранено"
+
+#: includes/sunrise/fields/closetab.php:6
+msgid "Reset all settings to default. Are you sure? This action cannot be undone!"
+msgstr "Сброс всех настроек. Вы уверены? Это действие нельзя будет отменить!"
+
+#: includes/sunrise/fields/closetab.php:6
+msgid "Restore default settings"
+msgstr "Восстановить настройки"
+
+#: includes/sunrise/fields/code.php:5
+msgid "Insert code"
+msgstr "Вставьте код"
+
