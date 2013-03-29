@@ -3,7 +3,7 @@
 	/*
 	  Plugin Name: Plugin name
 	  Plugin URI: http://example.com/
-	  Version: 1.0.0
+	  Version: 1.3.0
 	  Author: Author Name
 	  Author URI: http://example.com/
 	  Description: Plugin description
@@ -27,13 +27,10 @@
 	) );
 
 	// Include plugin actions
-	require_once 'inc/your-plugin-file.php';
+	require_once 'inc/plugin-actions.php';
 
 	// Make plugin meta translatable
 	__( 'Author Name', $sunrise->textdomain );
 	__( 'Vladimir Anokhin', $sunrise->textdomain );
 	__( 'Plugin description', $sunrise->textdomain );
-
-	// Destroy plugin instance
-	unset( $sunrise );
 ?>

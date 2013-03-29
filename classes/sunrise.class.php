@@ -9,13 +9,13 @@
 		 * Sunrise Plugin Framework Class
 		 *
 		 * @author Vladimir Anokhin <ano.vladimir@gmail.com>
-		 * @link http://sunrise.gndev.info/
-		 * @version 1.2.0
+		 * @link http://gndev.info/sunrise/
+		 * @version 1.3.0
 		 */
 		class Sunrise_Plugin_Framework {
 
 			/** @var string Plugin Framework version */
-			var $sunrise_version = '1.2.0';
+			var $sunrise_version = '1.3.0';
 
 			/** @var string Plugin URL - plugin page (from meta description) */
 			var $plugin_url;
@@ -68,8 +68,8 @@
 			 * @param string $inc Relative path to includes directory. Default: 'inc/sunrise'
 			 * @param string $assets Relative path to assets directory. Default: 'assets'
 			 */
-			function Sunrise_Plugin_Framework( $inc = 'inc/sunrise', $assets = 'assets' ) {
-			
+			function __construct( $inc = 'inc/sunrise', $assets = 'assets' ) {
+
 				global $sunrise_file;
 
 				// Get plugin slug
@@ -92,23 +92,14 @@
 				$this->includes = implode( '/', array( WP_PLUGIN_DIR, $this->slug, trim( $inc, '/' ) ) );
 				$this->assets_dir = trim( $assets, '/' );
 
-				// Add plugin initialization hook
-				add_action( 'init', array( &$this, 'plugin_init' ) );
+				// Make plugin available for translation
+				load_plugin_textdomain( $this->textdomain, false, $this->slug . '/languages/' );
 				// Enqueue assets
 				add_action( 'init', array( &$this, 'enqueue_assets' ) );
 				// Insert default settings if it's doesn't exists
 				add_action( 'admin_init', array( &$this, 'default_settings' ) );
 				// Manage options
 				add_action( 'admin_menu', array( &$this, 'manage_options' ) );
-			}
-
-			/**
-			 * Plugin initialization hook
-			 */
-			function plugin_init() {
-
-				// Make plugin available for translation
-				load_plugin_textdomain( $this->textdomain, false, $this->slug . '/languages/' );
 			}
 
 			/**
