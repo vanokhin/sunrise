@@ -22,8 +22,8 @@ Sunrise is an opensource and OOP-based WordPress plugin framework. It was design
 
 = Useful links =
 
-* [Documentation](http://gndev.info/sunrise/)
-* [GitHub repo](http://gndev.info/sunrise/)
+* [Documentation](https://github.com/gndev/sunrise/wiki)
+* [GitHub repo](https://github.com/gndev/sunrise/)
 * [Support forum](http://wordpress.org/support/plugin/sunrise/)
 * [My Twitter](http://twitter.com/gndevinfo) and [homepage](http://gndev.info/)
 
@@ -35,7 +35,7 @@ Unzip plugin files and upload them under your '/wp-content/plugins/' directory.
 Resulted names will be:
   './wp-content/plugins/sunrise/*'
 
-See more docs at <http://gndev.info/sunrise/>
+See more docs at <https://github.com/gndev/sunrise/wiki>
 
 
 == Upgrade Notice ==
