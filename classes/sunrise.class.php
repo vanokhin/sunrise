@@ -107,9 +107,14 @@
 			 * Enqueue assets
 			 */
 			function enqueue_assets() {
-				wp_print_styles( array( 'thickbox', 'farbtastic', 'sunrise-plugin-framework' ) );
-				wp_print_scripts( array( 'jquery', 'media-upload', 'thickbox', 'farbtastic',
-				                         'sunrise-plugin-framework-form', 'sunrise-plugin-framework' ) );
+				if ( !$this->is_settings() ) return;
+				foreach ( array( 'thickbox', 'farbtastic', 'sunrise-plugin-framework' ) as $style ) {
+					wp_enqueue_style( $style );
+				}
+				foreach ( array( 'jquery', 'media-upload', 'thickbox', 'farbtastic', 'sunrise-plugin-framework-form',
+				                 'sunrise-plugin-framework' ) as $script ) {
+					wp_enqueue_script( $script );
+				}
 			}
 
 			/**
