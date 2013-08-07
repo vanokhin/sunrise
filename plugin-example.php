@@ -12,20 +12,25 @@
 	  License: GPL
 	 */
 
-	// Include Sunrise Plugin Framework class
-	require_once 'classes/sunrise.class.php';
+	function init_plugin_example() {
 
-	// Create plugin instance
-	$plugin_example = new Sunrise_Plugin_Framework_2( __FILE__ );
+		// Include Sunrise Plugin Framework class
+		require_once 'classes/sunrise.class.php';
 
-	// Include options set
-	include_once 'inc/options.php';
+		// Create plugin instance
+		$plugin_example = new Sunrise_Plugin_Framework_2( __FILE__ );
 
-	// Create options page
-	$plugin_example->add_options_page( array(), $plugin_example_options );
+		// Include options set
+		include_once 'inc/options.php';
 
-	// Make plugin meta translatable
-	__( 'Plugin Name', $plugin_example->textdomain );
-	__( 'Author Name', $plugin_example->textdomain );
-	__( 'Plugin description', $plugin_example->textdomain );
+		// Create options page
+		$plugin_example->add_options_page( array(), $plugin_example_options );
+
+		// Make plugin meta translatable
+		__( 'Plugin Name', $plugin_example->textdomain );
+		__( 'Author Name', $plugin_example->textdomain );
+		__( 'Plugin description', $plugin_example->textdomain );
+	}
+
+	add_action( 'init', 'init_plugin_example' );
 ?>
