@@ -4,16 +4,28 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: plugin, admin, framework, developer, development, dev, options, panel, settings, page, quick, deploy, plugin template
 Requires at least: 3.3
 Tested up to: 4.0
-Stable tag: 1.3.0
+Stable tag: 2.0.0
+License: GPL
 
-Quick deployment, together with sufficient functionality
+Plugin framework, that was designed to speed up plugin deployment and development
 
 
 == Description ==
 
-Sunrise is an opensource and OOP-based WordPress plugin framework. It was designed to speed up plugin deployment, together with sufficient functionality.
+Sunrise is an opensource and OOP-based WordPress plugin framework. It was designed to speed up plugin deployment, together with sufficient functionality. This great framework allows you to create powerful options pages with just a few lines of code.
 
-See the documentation at <http://gndev.info/sunrise/>
+= Features out of the box =
+
+* Powerful options, e.g. ajax upload fields, color pickers, checkbox groups and much more
+* Translation support
+* OOP-based and easily extensible
+
+= Useful links =
+
+* [Documentation](http://gndev.info/sunrise/)
+* [GitHub repo](http://gndev.info/sunrise/)
+* [Support forum](http://wordpress.org/support/plugin/sunrise/)
+* [My Twitter](http://twitter.com/gndevinfo) and [homepage](http://gndev.info/)
 
 
 == Installation ==
@@ -41,10 +53,14 @@ Upgrade normally via your Wordpress admin -> Plugins panel.
 
 == Frequently Asked Questions ==
 
-Please post your questions at the [support forum](http://wordpress.org/support/plugin/shortcodes-ultimate/).
+Please post your questions at the [support forum](http://wordpress.org/support/plugin/sunrise/).
 
 
 == Changelog ==
+
+= 2.0 =
+* Completely rewritten code
+* Now main class called Sunrise_Plugin_Framework_2
 
 = 1.3 =
 * Small fixes in class code

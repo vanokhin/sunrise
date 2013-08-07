@@ -1,10 +1,19 @@
 Sunrise - WordPress Plugin Framework
-================================================================================
+====================================
 
 Sunrise is an opensource and OOP-based WordPress plugin framework.
-It was designed to speed up plugin deployment, together with sufficient
+It was designed to speed up plugin deployment and development, together with sufficient
 functionality.
 
-## [Homepage - Info, Docs, Screenshots](http://gndev.info/sunrise/)
+#### Features out of the box
 
-## [Page at wordpress.org](http://wordpress.org/extend/plugins/sunrise/)
+* Powerful options, e.g. ajax upload fields, color pickers, checkbox groups and much more
+* Translation support
+* OOP-based and easily extensible
+
+#### Useful links
+
+* [Documentation](http://gndev.info/sunrise/)
+* [Page at wordpress.org](http://wordpress.org/plugins/sunrise/)
+* [Support forum](http://wordpress.org/support/plugin/sunrise/)
+* [My Twitter](http://twitter.com/gndevinfo) and [homepage](http://gndev.info/)
