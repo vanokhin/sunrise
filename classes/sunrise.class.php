@@ -65,6 +65,9 @@
 				// Prepare initial data
 				$this->file = $file;
 				$this->args = wp_parse_args( $args, $defaults );
+				// Check that function get_plugin_data exists
+				if ( !function_exists( 'get_plugin_data' ) )
+					require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 				// Read plugin meta
 				$this->meta = get_plugin_data( $this->file, false );
 				// Init plugin data
