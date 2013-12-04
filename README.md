@@ -8,7 +8,7 @@ functionality.
 
 #### Screenshots
 
-[Regular fields](https://raw.github.com/gndev/sunrise/master/regular-fields.png), [Extra fields](https://raw.github.com/gndev/sunrise/master/extra-fields.png)
+![Regular fields](https://raw.github.com/gndev/sunrise/master/regular-fields.png), ![Extra fields](https://raw.github.com/gndev/sunrise/master/extra-fields.png)
 
 ##### Useful links
 
