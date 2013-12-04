@@ -1,19 +1,11 @@
-Sunrise - WordPress Plugin Framework
-====================================
+Sunrise - Options Pages Framework for WordPress Plugins and themes
+------------------------------------------------------------------
 
-Sunrise is an opensource and OOP-based WordPress plugin framework.
-It was designed to speed up plugin deployment and development, together with sufficient
+Sunrise is an open-source and OOP-based plugin framework. It can help you to make unlimited number of fast and powerful options pages with native look in your WordPress plugins or themes. It was designed to speed up plugin deployment and development, together with sufficient
 functionality.
-
-#### Features out of the box
-
-* Powerful options, e.g. ajax upload fields, color pickers, checkbox groups and much more
-* Translation support
-* OOP-based and easily extensible
 
 #### Useful links
 
-* [Documentation](https://github.com/gndev/sunrise/wiki)
-* [Page at wordpress.org](http://wordpress.org/plugins/sunrise/)
-* [Support forum](http://wordpress.org/support/plugin/sunrise/)
+* [Documentation](https://gndev.info/kb/) - __not available yet__ - read the code for more info
 * [My Twitter](http://twitter.com/gndevinfo) and [homepage](http://gndev.info/)
+* [Page at wordpress.org](http://wordpress.org/plugins/sunrise/)

@@ -1,0 +1,218 @@
+/***********************************
+	Common styles
+***********************************/
+
+.sunrise-onehalf {
+	width: 46%;
+	margin: 0 4% 1em 0;
+	float: left;
+}
+.sunrise-onethird {
+	width: 31%;
+	margin: 0 2% 1em 0;
+	float: left;
+}
+.sunrise-clear {
+	display: block;
+	height: 0;
+	clear: both;
+	overflow: hidden;
+}
+.sunrise-hidden { display: none; }
+
+
+/***********************************
+	Nav tabs
+***********************************/
+
+#sunrise-tabs { }
+#sunrise-tabs span { cursor: pointer; }
+#sunrise-tabs .nav-tab-active,
+#sunrise-tabs span:hover { color: #464646; }
+#sunrise-tabs .nav-tab-active { cursor: default; }
+h3.sunrise-no-js-tab {
+	margin: 1em 0;
+	padding: 1em;
+	border-top: 2px solid #ccc;
+	border-bottom: 2px solid #ccc;
+	background: #f2f2f2;
+	color: #555;
+}
+
+
+/***********************************
+	Panes
+***********************************/
+
+.sunrise-pane {
+	margin: 2em 0;
+}
+.sunrise-pane .widefat {
+	max-width: 600px;
+}
+.js .sunrise-pane {
+	display: none;
+	border: none;
+}
+
+
+/***********************************
+	Notices
+***********************************/
+
+#sunrise-settings div.sunrise-notice { margin: 1.5em 0; }
+
+
+/***********************************
+	Inline menus
+***********************************/
+
+.sunrise-inline-menu {
+	margin: 1.5em 0;
+	line-height: 1.5em;
+}
+.sunrise-inline-menu a {
+	display: inline-block;
+	padding: 0 0.7em;
+	border-right: 1px dotted #ccc;
+	text-decoration: none;
+	line-height: 1.5em;
+}
+.sunrise-inline-menu a:hover {
+	text-decoration: underline;
+}
+.sunrise-inline-menu a:first-child {
+	padding-left: 0;
+}
+.sunrise-inline-menu a:last-child {
+	display: inline-block;
+	padding-right: 0;
+	border-right: none;
+}
+
+
+/***********************************
+	Common fields
+***********************************/
+
+#sunrise-settings .form-table td,
+#sunrise-settings .form-table th { padding-bottom: 20px; }
+
+#sunrise-settings .description {
+	display: block;
+	margin-top: 5px;
+}
+
+#sunrise-settings textarea { min-width: 200px; }
+
+.sunrise-checkbox-group label {
+	display: inline-block;
+	margin: 0 0 5px 0;
+}
+.sunrise-title-field {
+	margin: 0 0 0.5em;
+	padding: 0 0 0.5em;
+	border-bottom: 1px solid #ddd;
+	color: #999;
+	font-weight: bold;
+	font-size: 17px;
+}
+
+
+/***********************************
+	Color picker
+***********************************/
+
+.sunrise-color-picker { position: relative; }
+.sunrise-color-picker-wheel {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 9999;
+	display: none;
+	border: 1px solid #aaa;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	background: #fff;
+	-webkit-box-shadow: 0 2px 5px #ccc;
+	-moz-box-shadow: 0 2px 5px #ccc;
+	box-shadow: 0 2px 5px #ccc;
+}
+.sunrise-color-picker .button img {
+	margin: -3px 4px 0 -4px;
+	vertical-align: middle;
+}
+
+
+/***********************************
+	Media manager
+***********************************/
+
+.sunrise-media { }
+.sunrise-media .button img {
+	margin: -3px 4px 0 -4px;
+	vertical-align: middle;
+}
+
+
+/***********************************
+	Image radio
+***********************************/
+
+.sunrise-image-radio { }
+.sunrise-image-radio a {
+	position: relative;
+	display: inline-block;
+	margin: 0 10px 10px 0;
+	padding: 4px;
+	background: #f0f0f0;
+	text-decoration: none;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	outline: none;
+}
+.sunrise-image-radio a:hover {
+	background: #eee;
+}
+.sunrise-image-radio a.sunrise-image-radio-selected {
+	background: #2685AF;
+}
+.sunrise-image-radio img {
+	max-width: 400px;
+	margin: 0;
+	padding: 0;
+	border: 1px solid #fff;
+	display: block;
+}
+.sunrise-image-radio a.sunrise-image-radio-selected img {
+	opacity: 0.85;
+	filter: alpha(opacity=85);
+}
+
+
+/***********************************
+	Actions bar
+***********************************/
+
+.sunrise-actions-bar {
+	margin-top: 20px;
+	padding: 10px;
+	border-top: 1px solid #eee;
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-radius-bottomright: 5px;
+	border-bottom-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-bottom-left-radius: 5px;
+	background: #f5f5f5;
+}
+.sunrise-spin,
+.sunrise-success-tip {
+	display: none;
+	margin-left: 10px;
+}
+.sunrise-success-tip { color: #0b0; }
+.sunrise-spin img,
+.sunrise-success-tip img { margin: 0 5px -3px 0; }
