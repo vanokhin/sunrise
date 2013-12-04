@@ -8,7 +8,7 @@ functionality.
 
 ##### Quick start
 
-Open example-plugin.php and modify the code as you want. Detailed documentation will be added in closest future. Use native WordPress functions to get and update created options - get_option( $id ), update_option( $id, 'new value' )
+Open file _plugin-example.php_ and modify the code as you want. Detailed documentation will be added in closest future. Use native WordPress functions to get and update created options - get_option( $id ), update_option( $id, 'new value' )
 
 ##### Useful links
 
