@@ -8,7 +8,7 @@
   Author URI: http://gndev.info/
   Text Domain: plugin-example
   Domain Path: /languages
-  License: GPL2
+  License: MIT
  */
 
 require_once 'sunrise.php';
