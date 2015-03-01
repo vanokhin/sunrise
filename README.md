@@ -3,7 +3,7 @@ Sunrise for WordPress
 
 ### New Maintainer
 
-As of March 1, 2015, [Tyler Longren](https://longrendev.io/) has taken over maintenance of this plugin. If you have any feature requests or know of something broken, please create an issue. I am **especially interested in removing any deprecated WordPress functions** and replacing them with their proper alternatives.
+As of March 1, 2015, [Tyler Longren](https://longrendev.io/) has taken over maintenance of this plugin. If you have any feature requests or know of something broken, please [create an issue](https://github.com/gndev/sunrise/issues). I am **especially interested in removing any deprecated WordPress functions** and replacing them with their proper alternatives.
 
 #### Options Pages Framework for WordPress Plugins and Themes
 
