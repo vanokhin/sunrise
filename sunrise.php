@@ -87,7 +87,7 @@ if ( !class_exists( 'Sunrise6' ) ) {
 					'menu_title'  => __( 'Plugin Settings', $this->config['textdomain'] ),
 					'capability'  => 'manage_options',
 					'slug'        => $this->config['slug'],
-					'icon_url'    => admin_url( 'images/wp-logo.png' ),
+					'icon_url'    => '',
 					'position'    => '81.' . rand( 0, 99 ),
 					'url'         => '',
 					'options'     => array()
