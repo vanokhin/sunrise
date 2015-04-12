@@ -1,5 +1,5 @@
 <?php
-if ( !class_exists( 'Sunrise6' ) ) {
+if ( !class_exists( 'Sunrise7' ) ) {
 
 	/**
 	 * Sunrise
@@ -7,7 +7,7 @@ if ( !class_exists( 'Sunrise6' ) ) {
 	 * @author  Vladimir Anokhin <http://gndev.info/>
 	 * @license MIT
 	 */
-	class Sunrise6 {
+	class Sunrise7 {
 
 		/** @var array Class config */
 		var $config = array();
@@ -25,14 +25,14 @@ if ( !class_exists( 'Sunrise6' ) ) {
 					'prefix'      => '',
 					'textdomain'  => '',
 					'url'         => '',
-					'version'     => '6',
+					'version'     => '7',
 					'options'     => array(),
 					'menus'       => array(),
 					'pages'       => array(),
 					'slugs'       => array(),
 					'css'         => 'assets/css',
 					'js'          => 'assets/js',
-					'views_class' => 'Sunrise6_Views'
+					'views_class' => 'Sunrise7_Views'
 				) );
 			// Check required settings
 			if ( !$args['file'] ) wp_die( 'Sunrise: please specify plugin __FILE__' );
@@ -338,14 +338,14 @@ if ( !class_exists( 'Sunrise6' ) ) {
 	}
 }
 
-if ( !class_exists( 'Sunrise6_Views' ) ) {
+if ( !class_exists( 'Sunrise7_Views' ) ) {
 
 	/**
 	 * Sunrise Views
 	 *
 	 * no comments, just some markup
 	 */
-	class Sunrise6_Views {
+	class Sunrise7_Views {
 
 		function __construct() {}
 
