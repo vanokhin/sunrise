@@ -31,16 +31,16 @@ jQuery(document).ready(function ($) {
 	// ########## Ajaxed form ##########
 
 	$('#sunrise-form').ajaxForm({
-		beforeSubmit: function () {
+		beforeSubmit: function() {
 			$('.sunrise-success-tip').hide();
 			$('.sunrise-spin').fadeIn(200);
 			$('.sunrise-submit').attr('disabled', true);
 			$('.sunrise-notice').fadeOut(400);
 		},
-		success: function () {
+		success: function() {
 			$('.sunrise-spin').hide();
 			$('.sunrise-success-tip').show();
-			setTimeout(function () {
+			setTimeout(function() {
 				$('.sunrise-success-tip').fadeOut(200);
 			}, 2000);
 			$('.sunrise-submit').attr('disabled', false);
