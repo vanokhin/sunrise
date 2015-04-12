@@ -22,5 +22,8 @@ Open file _plugin-example.php_ and modify the code as you want. Detailed documen
 
 #### Screenshots
 
-![Regular fields](https://raw.github.com/gndev/sunrise/master/screenshots.delete/regular-fields.png)
-![Extra fields](https://raw.github.com/gndev/sunrise/master/screenshots.delete/extra-fields.png)
+*Regular fields*
+![Regular fields](/_screenshots/screenshot-1.png?raw=true)
+
+*Extra fields*
+![Extra fields](/_screenshots/screenshot-2.png?raw=true)
