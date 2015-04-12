@@ -18,7 +18,7 @@ require_once 'sunrise.php';
  */
 function plugin_example_init() {
 
-	// Make plugin available for translation, change /languages/ to your .mo-files folder name
+	// Make plugin available for translation, you can change /languages/ to your .mo-files folder name
 	load_plugin_textdomain( 'plugin-example', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
 	// Initialize Sunrise
@@ -34,7 +34,7 @@ function plugin_example_init() {
 			// Custom CSS assets folder
 			'css' => '',
 			// Custom JS assets folder
-			'js' => ''
+			'js' => '',
 		) );
 
 	// Prepare array with options
@@ -43,7 +43,7 @@ function plugin_example_init() {
 		// Open tab: Regular fields
 		array(
 			'type' => 'opentab',
-			'name' => __( 'Regular fields', 'plugin-example' )
+			'name' => __( 'Regular fields', 'plugin-example' ),
 		),
 
 		// Text field
@@ -52,7 +52,7 @@ function plugin_example_init() {
 			'type'    => 'text',
 			'default' => 'Default value',
 			'name'    => __( 'Text field', 'plugin-example' ),
-			'desc'    => __( 'Text field description', 'plugin-example' )
+			'desc'    => __( 'Text field description', 'plugin-example' ),
 		),
 
 		// Textarea
@@ -62,7 +62,7 @@ function plugin_example_init() {
 			'default' => 'Default value',
 			'rows'    => 10,
 			'name'    => __( 'Textarea', 'plugin-example' ),
-			'desc'    => __( 'Textarea description', 'plugin-example' )
+			'desc'    => __( 'Textarea description', 'plugin-example' ),
 		),
 
 		// Checkbox
@@ -72,7 +72,7 @@ function plugin_example_init() {
 			'default' => 'on',
 			'name'    => __( 'Checkbox', 'plugin-example' ),
 			'desc'    => __( 'Checkbox description', 'plugin-example' ),
-			'label'   => __( 'Enabled', 'plugin-example' )
+			'label'   => __( 'Enabled', 'plugin-example' ),
 		),
 
 		// Select (dropdown list)
@@ -85,17 +85,17 @@ function plugin_example_init() {
 			'options' => array(
 				array(
 					'value' => 'option-1',
-					'label'  => __( 'Option 1', 'plugin-example' )
+					'label'  => __( 'Option 1', 'plugin-example' ),
 				),
 				array(
 					'value' => 'option-2',
-					'label'  => __( 'Option 2', 'plugin-example' )
+					'label'  => __( 'Option 2', 'plugin-example' ),
 				),
 				array(
 					'value' => 'option-3',
-					'label'  => __( 'Option 3', 'plugin-example' )
-				)
-			)
+					'label'  => __( 'Option 3', 'plugin-example' ),
+				),
+			),
 		),
 
 		// Multi-select (dropdown list with multiple choices)
@@ -108,19 +108,19 @@ function plugin_example_init() {
 			'options' => array(
 				array(
 					'value' => 'option-1',
-					'label'  => __( 'Option 1', 'plugin-example' )
+					'label'  => __( 'Option 1', 'plugin-example' ),
 				),
 				array(
 					'value' => 'option-2',
-					'label'  => __( 'Option 2', 'plugin-example' )
+					'label'  => __( 'Option 2', 'plugin-example' ),
 				),
 				array(
 					'value' => 'option-3',
-					'label'  => __( 'Option 3', 'plugin-example' )
+					'label'  => __( 'Option 3', 'plugin-example' ),
 				)
 			),
 			'multiple' => true,
-			'size' => 4
+			'size' => 4,
 		),
 
 		// Radio buttons
@@ -133,15 +133,15 @@ function plugin_example_init() {
 			'options' => array(
 				array(
 					'value' => 'option-1',
-					'label'  => __( 'Option 1', 'plugin-example' )
+					'label'  => __( 'Option 1', 'plugin-example' ),
 				),
 				array(
 					'value' => 'option-2',
-					'label'  => __( 'Option 2', 'plugin-example' )
+					'label'  => __( 'Option 2', 'plugin-example' ),
 				),
 				array(
 					'value' => 'option-3',
-					'label'  => __( 'Option 3', 'plugin-example' )
+					'label'  => __( 'Option 3', 'plugin-example' ),
 				)
 			)
 		),
@@ -155,18 +155,18 @@ function plugin_example_init() {
 			'desc'    => __( 'Number field description', 'plugin-example' ),
 			'min'     => 0,
 			'max'     => 20,
-			'step'    => 1
+			'step'    => 1,
 		),
 
 		// Close tab: Regular fields
 		array(
-			'type' => 'closetab'
+			'type' => 'closetab',
 		),
 
 		// Open tab: Extra fields
 		array(
 			'type' => 'opentab',
-			'name' => __( 'Extra fields', 'plugin-example' )
+			'name' => __( 'Extra fields', 'plugin-example' ),
 		),
 
 		// Media (text field with Media library button)
@@ -175,7 +175,7 @@ function plugin_example_init() {
 			'type'    => 'media',
 			'default' => '',
 			'name'    => __( 'Media', 'plugin-example' ),
-			'desc'    => __( 'Media field description', 'plugin-example' )
+			'desc'    => __( 'Media field description', 'plugin-example' ),
 		),
 
 		// Color picker
@@ -184,7 +184,7 @@ function plugin_example_init() {
 			'type'    => 'color',
 			'default' => '#0099ff',
 			'name'    => __( 'Color', 'plugin-example' ),
-			'desc'    => __( 'Color field description', 'plugin-example' )
+			'desc'    => __( 'Color field description', 'plugin-example' ),
 		),
 
 		// Size picker
@@ -197,7 +197,7 @@ function plugin_example_init() {
 			'units'   => array( 'px', 'em', '%' ),
 			'min'     => 0,
 			'max'     => 200,
-			'step'    => 10
+			'step'    => 10,
 		),
 
 		// Checkbox group
@@ -206,38 +206,38 @@ function plugin_example_init() {
 			'type'    => 'checkbox_group',
 			'default' => array(
 				'checkbox-1' => 'on',
-				'checkbox-2' => 'on'
+				'checkbox-2' => 'on',
 			),
 			'name'    => __( 'Checkbox group', 'plugin-example' ),
 			'desc'    => __( 'Checkbox group description', 'plugin-example' ),
 			'options' => array(
 				array(
 					'id'    => 'checkbox-1',
-					'label' => __( 'Checkbox 1', 'plugin-example' )
+					'label' => __( 'Checkbox 1', 'plugin-example' ),
 				),
 				array(
 					'id'    => 'checkbox-2',
-					'label' => __( 'Checkbox 2', 'plugin-example' )
+					'label' => __( 'Checkbox 2', 'plugin-example' ),
 				),
 				array(
 					'id'    => 'checkbox-3',
-					'label' => __( 'Checkbox 3', 'plugin-example' )
+					'label' => __( 'Checkbox 3', 'plugin-example' ),
 				)
 			),
 			'multiple' => true,
-			'size' => 4
+			'size' => 4,
 		),
 
 		// Custom HTML content
 		array(
 			'type'    => 'html',
-			'content' => '<h3>HTML field type</h3><p>Paragraph tag</p>'
+			'content' => '<h3>HTML field type</h3><p>Paragraph tag</p>',
 		),
 
 		// Custom title
 		array(
 			'type' => 'title',
-			'name' => __( 'Title field', 'plugin-example' )
+			'name' => __( 'Title field', 'plugin-example' ),
 		),
 
 		// Image radio
@@ -251,54 +251,71 @@ function plugin_example_init() {
 				array(
 					'value' => 'option-1',
 					'label' => __( 'Option 1', 'plugin-example' ),
-					'image' => 'http://lorempixel.com/120/90/food/1/'
+					'image' => 'http://lorempixel.com/120/90/food/1/',
 				),
 				array(
 					'value' => 'option-2',
 					'label' => __( 'Option 2', 'plugin-example' ),
-					'image' => 'http://lorempixel.com/120/90/food/2/'
+					'image' => 'http://lorempixel.com/120/90/food/2/',
 				),
 				array(
 					'value' => 'option-3',
 					'label' => __( 'Option 3', 'plugin-example' ),
-					'image' => 'http://lorempixel.com/120/90/food/3/'
-				)
-			)
+					'image' => 'http://lorempixel.com/120/90/food/3/',
+				),
+			),
 		),
 
 		// Close tab: Extra fields
 		array(
-			'type' => 'closetab'
+			'type' => 'closetab',
 		)
 	);
 
 	// Add top-level menu (like Dashboard -> Comments)
 	$admin->add_menu( array(
-			'page_title'  => __( 'Example Plugin Settings', 'plugin-example' ), // Settings page <title>
-			'menu_title'  => __( 'Example Plugin', 'plugin-example' ), // Menu title, will be shown in left dashboard menu
-			'capability'  => 'manage_options', // Minimal user capability to access this page
-			'slug'        => 'plugin-example-settings', // Unique page slug
-			'icon_url'    => admin_url( 'images/wp-logo.png' ), // Add here your custom icon url
-			'position'    => '91.1', // Menu position from 80 to <infinity>, you can use decimals
-			'options'     => $options // Array with options available on this page
+			// Settings page <title>
+			'page_title' => __( 'Example Plugin Settings', 'plugin-example' ),
+			// Menu title, will be shown in left dashboard menu
+			'menu_title' => __( 'Example Plugin', 'plugin-example' ),
+			// Minimal user capability to access this page
+			'capability' => 'manage_options',
+			// Unique page slug
+			'slug' => 'plugin-example-settings',
+			// Add here your custom icon url, or use [dashicons](https://developer.wordpress.org/resource/dashicons/)
+			'icon_url' => admin_url( 'images/wp-logo.png' ),
+			// Menu position from 80 to <infinity>, you can use decimals
+			'position' => '91.1',
+			// Array with options available on this page
+			'options' => $options,
 		) );
 
 	// Add sub-menu (like Dashboard -> Settings -> Permalinks)
 	$admin->add_submenu( array(
-			'page_title'  => __( 'Example Plugin Settings', 'plugin-example' ), // Settings page <title>
-			'menu_title'  => __( 'Page 2', 'plugin-example' ), // Menu title, will be shown in left dashboard menu
-			'slug'        => 'plugin-example-settings-2', // Unique page slug, you can use here the slug of parent page, which you've already created
-			'parent_slug' => 'plugin-example-settings', // Slug of the parent page (see above)
-			'options'     => $options // Array with options available on this page
+			// Settings page <title>
+			'page_title' => __( 'Example Plugin Settings', 'plugin-example' ),
+			// Menu title, will be shown in left dashboard menu
+			'menu_title' => __( 'Page 2', 'plugin-example' ),
+			// Unique page slug, you can use here the slug of parent page, which you've already created
+			'slug' => 'plugin-example-settings-2',
+			// Slug of the parent page (see above)
+			'parent_slug' => 'plugin-example-settings',
+			// Array with options available on this page
+			'options' => $options,
 		) );
 
 	// Add another sub-menu (like Dashboard -> Settings -> Permalinks)
 	$admin->add_submenu( array(
-			'page_title'  => __( 'Example Plugin Settings', 'plugin-example' ), // Settings page <title>
-			'menu_title'  => __( 'Page 3', 'plugin-example' ), // Menu title, will be shown in left dashboard menu
-			'slug'        => 'plugin-example-settings-3', // Unique page slug, you can use here the slug of parent page, which you've already created
-			'parent_slug' => 'plugin-example-settings', // Slug of the parent page (see above)
-			'options'     => $options // Array with options available on this page
+			// Settings page <title>
+			'page_title' => __( 'Example Plugin Settings', 'plugin-example' ),
+			// Menu title, will be shown in left dashboard menu
+			'menu_title' => __( 'Page 3', 'plugin-example' ),
+			// Unique page slug, you can use here the slug of parent page, which you've already created
+			'slug' => 'plugin-example-settings-3',
+			// Slug of the parent page (see above)
+			'parent_slug' => 'plugin-example-settings',
+			// Array with options available on this page
+			'options' => $options,
 		) );
 }
 
