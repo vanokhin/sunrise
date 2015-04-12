@@ -283,7 +283,8 @@ function plugin_example_init() {
 			// Unique page slug
 			'slug' => 'plugin-example-settings',
 			// Add here your custom icon url, or use [dashicons](https://developer.wordpress.org/resource/dashicons/)
-			'icon_url' => admin_url( 'images/wp-logo.png' ),
+			// 'icon_url' => admin_url( 'images/wp-logo.png' ),
+			'icon_url' => 'dashicons-wordpress',
 			// Menu position from 80 to <infinity>, you can use decimals
 			'position' => '91.1',
 			// Array with options available on this page
