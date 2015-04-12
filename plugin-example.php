@@ -2,7 +2,7 @@
 /*
   Plugin Name: Example Plugin (Sunrise)
   Plugin URI: http://anovladimir.me/sunrise/
-  Version: 1.0.0
+  Version: 7.0.0
   Description: Options Pages Framework
   Author: Vladimir Anokhin
   Author URI: http://anovladimir.me/
