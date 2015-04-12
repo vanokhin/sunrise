@@ -1,11 +1,11 @@
 <?php
 /*
   Plugin Name: Example Plugin (Sunrise)
-  Plugin URI: http://gndev.info/sunrise/
-  Version: 6.0.0
-  Description: Options Page Framework
+  Plugin URI: http://anovladimir.me/sunrise/
+  Version: 1.0.0
+  Description: Options Pages Framework
   Author: Vladimir Anokhin
-  Author URI: http://gndev.info/
+  Author URI: http://anovladimir.me/
   Text Domain: plugin-example
   Domain Path: /languages
   License: MIT
