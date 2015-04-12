@@ -22,13 +22,19 @@ function plugin_example_init() {
 	load_plugin_textdomain( 'plugin-example', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
 	// Initialize Sunrise
-	$admin = new Sunrise6( array(
-			'file'       => __FILE__,
-			'slug'       => 'plugin-example',
-			'prefix'     => 'plugin_example_',
+	$admin = new Sunrise7( array(
+			// Sunrise file path
+			'file' => __FILE__,
+			// Plugin slug (should be equal to plugin directory name)
+			'slug' => 'plugin-example',
+			// Plugin prefix
+			'prefix' => 'plugin_example_',
+			// Plugin textdomain
 			'textdomain' => 'plugin-example',
-			'css'        => '',
-			'js'         => ''
+			// Custom CSS assets folder
+			'css' => '',
+			// Custom JS assets folder
+			'js' => ''
 		) );
 
 	// Prepare array with options
