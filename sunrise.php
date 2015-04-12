@@ -147,7 +147,7 @@ if ( !class_exists( 'Sunrise7' ) ) {
 			// Prepare page options
 			$options = $this->get_page_options();
 			// Get current page slug
-			$page = sanitize_title_with_dashes( $_GET['page'], 'save' );
+			$page = sanitize_key( $_GET['page'] );
 			// Hook before page output
 			do_action( 'sunrise/page/before' );
 			do_action( 'sunrise/page/' . $page . '/before' );
@@ -234,8 +234,6 @@ if ( !class_exists( 'Sunrise7' ) ) {
 			if ( !$this->is_sunrise() ) return;
 			// Prepare page slug
 			$page = sanitize_key( $_GET['page'] );
-			// Prepare message var (Something went wrong)
-			$message = 3;
 			// Submit hooks
 			do_action( 'sunrise/submit', $this );
 			do_action( 'sunrise/submit/' . $page, $this );
@@ -243,8 +241,8 @@ if ( !class_exists( 'Sunrise7' ) ) {
 			$action  = sanitize_key( $_REQUEST['sunrise_action'] );
 			$request = ( isset( $_REQUEST['sunrise'] ) ) ? (array) $_REQUEST['sunrise'] : array();
 			// Run actions
-			switch ( $action ) {
-			case 'save': // Save options
+			// Save options
+			if ( $action === 'save' ) {
 				// Loop through current page options
 				foreach ( (array) $this->get_page_options() as $option ) {
 					// Option must have an ID
@@ -259,7 +257,9 @@ if ( !class_exists( 'Sunrise7' ) ) {
 				do_action( 'sunrise/save/' . $page, $this );
 				// Set message
 				$message = 1;
-			case 'reset': // Reset options
+			}
+			// Reset options
+			elseif ( $action === 'reset' ) {
 				// Loop through current page options
 				foreach ( (array) $this->get_page_options() as $option ) {
 					// Option must have an ID
@@ -281,6 +281,11 @@ if ( !class_exists( 'Sunrise7' ) ) {
 				do_action( 'sunrise/reset/' . $page, $this );
 				// Set message
 				$message = 2;
+			}
+			// Other actions
+			else {
+				// Set message var to "Something went wrong..."
+				$message = 3;
 			}
 			// Go to page with specified message
 			wp_redirect( $this->get_page_url() . '&message=' . $message );
