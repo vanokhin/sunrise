@@ -146,18 +146,23 @@ if ( !class_exists( 'Sunrise7' ) ) {
 		public function render() {
 			// Prepare page options
 			$options = $this->get_page_options();
+			// Get current page slug
+			$page = sanitize_title_with_dashes( $_GET['page'], 'save' );
 			// Hook before page output
 			do_action( 'sunrise/page/before' );
+			do_action( 'sunrise/page/' . $page . '/before' );
 			echo '<div id="sunrise-settings" class="wrap">';
 			echo call_user_func( array( $this->config['views_class'], 'options_page_tabs' ), $options, $this->config );
 			echo call_user_func( array( $this->config['views_class'], 'options_page_notices' ), $options, $this->config );
 			echo '<form action="" method="post" id="sunrise-form">';
 			echo call_user_func( array( $this->config['views_class'], 'options_page_panes' ), $options, $this->config );
 			echo '<input type="hidden" name="sunrise_action" value="save" />';
+			echo '<input type="hidden" name="sunrise_nonce" value="' . wp_create_nonce( 'sunrise' ) . '" />';
 			do_action( 'sunrise/page/form' );
 			echo '</form></div>';
 			// Hook after page output
 			do_action( 'sunrise/page/after' );
+			do_action( 'sunrise/page/' . $page . '/after' );
 		}
 
 		/**
@@ -223,10 +228,14 @@ if ( !class_exists( 'Sunrise7' ) ) {
 		public function submit() {
 			// Check request
 			if ( empty( $_REQUEST['sunrise_action'] ) || empty( $_REQUEST['page'] ) ) return;
-			// Prepare page slug
-			$page = sanitize_key( $_GET['page'] );
+			// Check nonce
+			if ( empty( $_REQUEST['sunrise_nonce'] ) || !wp_verify_nonce( $_REQUEST['sunrise_nonce'], 'sunrise' ) ) return;
 			// Check page
 			if ( !$this->is_sunrise() ) return;
+			// Prepare page slug
+			$page = sanitize_key( $_GET['page'] );
+			// Prepare message var (Something went wrong)
+			$message = 3;
 			// Submit hooks
 			do_action( 'sunrise/submit', $this );
 			do_action( 'sunrise/submit/' . $page, $this );
@@ -248,9 +257,8 @@ if ( !class_exists( 'Sunrise7' ) ) {
 				// Save hooks
 				do_action( 'sunrise/save', $this );
 				do_action( 'sunrise/save/' . $page, $this );
-				// Go to page with message - Settings is saved
-				wp_redirect( $this->get_page_url() . '&message=1' );
-				exit;
+				// Set message
+				$message = 1;
 			case 'reset': // Reset options
 				// Loop through current page options
 				foreach ( (array) $this->get_page_options() as $option ) {
@@ -271,10 +279,12 @@ if ( !class_exists( 'Sunrise7' ) ) {
 				// Reset hooks
 				do_action( 'sunrise/reset', $this );
 				do_action( 'sunrise/reset/' . $page, $this );
-				// Go to page with message - Settings is reseted
-				wp_redirect( $this->get_page_url() . '&message=2' );
-				exit;
+				// Set message
+				$message = 2;
 			}
+			// Go to page with specified message
+			wp_redirect( $this->get_page_url() . '&message=' . $message );
+			exit;
 		}
 
 		/**
@@ -361,7 +371,7 @@ if ( !class_exists( 'Sunrise7_Views' ) ) {
 			$field = wp_parse_args( $field, array( 'actions' => true ) );
 			$return = array();
 			$return[] = '</table>';
-			if ( $field['actions'] ) $return[] = '<div class="sunrise-actions-bar"><input type="submit" value="' . __( 'Save changes', $config['textdomain'] ) . '" class="sunrise-submit button-primary" /><span class="sunrise-spin"><img src="' . admin_url( 'images/wpspin_light.gif' ) . '" alt="" /> ' . __( 'Saving', $config['textdomain'] ) . '&hellip;</span><span class="sunrise-success-tip"><img src="' . admin_url( 'images/yes.png' ) . '" alt="" /> ' . __( 'Saved', $config['textdomain'] ) . '</span><a href="' . $_SERVER["REQUEST_URI"] . '&amp;sunrise_action=reset" class="sunrise-reset button alignright" title="' . esc_attr( __( 'This action will delete all your settings. Are you sure? This action cannot be undone!', $config['textdomain'] ) ) . '">' . __( 'Restore default settings', $config['textdomain'] ) . '</a></div>';
+			if ( $field['actions'] ) $return[] = '<div class="sunrise-actions-bar"><input type="submit" value="' . __( 'Save changes', $config['textdomain'] ) . '" class="sunrise-submit button-primary" /><span class="sunrise-spin"><img src="' . admin_url( 'images/wpspin_light.gif' ) . '" alt="" /> ' . __( 'Saving', $config['textdomain'] ) . '&hellip;</span><span class="sunrise-success-tip"><img src="' . admin_url( 'images/yes.png' ) . '" alt="" /> ' . __( 'Saved', $config['textdomain'] ) . '</span><a href="' . $_SERVER["REQUEST_URI"] . '&amp;sunrise_action=reset&amp;sunrise_nonce=' . wp_create_nonce( 'sunrise' ) . '" class="sunrise-reset button alignright" title="' . esc_attr( __( 'This action will delete all your settings. Are you sure? This action cannot be undone!', $config['textdomain'] ) ) . '">' . __( 'Restore default settings', $config['textdomain'] ) . '</a></div>';
 			$return[] = '</div>';
 			return implode( '', $return );
 		}
@@ -557,7 +567,8 @@ if ( !class_exists( 'Sunrise7_Views' ) ) {
 			$msgs = apply_filters( 'sunrise/page/notices', array(
 					__( 'For full functionality of this page it is reccomended to enable javascript.', $config['textdomain'] ),
 					__( 'Settings saved successfully', $config['textdomain'] ),
-					__( 'Settings reseted successfully', $config['textdomain'] )
+					__( 'Settings reseted successfully', $config['textdomain'] ),
+					__( 'Something went wrong. Please try again later', $config['textdomain'] ),
 				) );
 			// Prepare output variable
 			$output = array();
