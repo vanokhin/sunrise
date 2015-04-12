@@ -16,8 +16,8 @@ Open file _plugin-example.php_ and modify the code as you want. Detailed documen
 
 ##### Useful links
 
-* [Documentation](https://gndev.info/kb/) - __not available yet__ - read the code for more info
-* [My Twitter](http://twitter.com/gndevinfo) and [homepage](http://gndev.info/)
+* [Documentation](https://gndev.info/kb/) - read the code for more info
+* [My Twitter](http://twitter.com/gndevinfo) and [homepage](http://anovladimir.me/)
 * [Page at wordpress.org](http://wordpress.org/plugins/sunrise/)
 
 #### Screenshots
